@@ -1,14 +1,13 @@
 import { Reminder } from "@/app/Reminder";
 
 interface ReminderProps {
-    test: Reminder,
+    data: Reminder,
 }
 
-export default function ShowReminder({test} : ReminderProps) {
-    console.log(test)
+export default function ShowReminder({data} : ReminderProps) {
     return (
-        <div className="text-lg text-red-600 p-8 border-2 w-full">
-            {test.value}
+        <div className="text-lg p-8 mt-4 border-2 w-11/12 bg-gray-100">
+            {data.value} {data.date.getDate()}
         </div>
     );
 }
